@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <!-- Place this data between the <head> tags of your website -->
+        <!-- title -->
+        <link rel="icon" href="src/img/title.png">
+        <title>JOREK | Impressum</title>
+        <meta name="description" content="Page description. No longer than 155 characters." />  
+        <!-- Open Graph data -->
+        <meta property="og:title" content="JOREK - Impressum" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://www.jorek-music.com/" />
+        <meta property="og:image" content="http://jorek-music.com/src/images/header.jpg" />
+        <meta property="og:description" content="Jorek uses every possibility to create his individuell and original sound. On the stage and as well as in the studio, he dominates his craft which is also reflected in his DJ sets." />
+        <meta property="og:site_name" content="Site Name, i.e. Moz" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="src/hamburger/hamburgers-master/dist/hamburgers.css">
+        
+        
+        <!-- SCSS -->
+        <link rel="stylesheet" href="src/scss/my.scss">
+        <!-- Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Roboto" >
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type='text/css'>
+    </head>
+    <!-- Viewable's -->
+    <body id="style-2">
+        <!-- Navigation -->
+        <header>
+            <button id="hamburger" class="hamburger hamburger--squeeze" type="button" onclick="openmenu()">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a href="http://jorek-music.com/about.html"> <img class="logo-jorek" src="src/img/Logo_W.png" alt="Jorek's Logo in Weiß"> </a>
+        </header>
+        <div id="expandedmenu">
+            <ul>
+                <li>
+                    <a href='index.html' onclick="openmenu()">Home</a>               
+                </li>
+                <li>
+                    <a href='blog.html' onclick="openmenu()">Blog</a>
+                </li>
+                <li>
+                    <a href='events.html' onclick="openmenu()">Events</a>
+                </li>
+                <li>
+                    <a href='contact.html' onclick="openmenu()">Contact</a>
+                </li>
+            </ul>
+            <blur onclick="openmenu()"></blur>
+        </div>
+        <!-- Contentpane -->
+        <main>
+            <script src="src/js/myscript.js"></script>
+            <div class="content"> 
+                   <h4>Impressum</h4>
+                    <p>Angaben gem&auml;&szlig; &sect; 5 TMG</p>
+                    <p> Joerg Junkersdorf
+                        <br>
+                    53879 Euskirchen <br></p><br>
+                    <h4>Contact</h4> 
+                    <br>
+                    <p>Telefon: 0173-5359201<br>
+                    E-Mail: <a href='mailto:info@jorek-music.com'>info@jorek-music.com</a></br></p><br>  
+                </div>
+                <div class="content" id="social">
+                    <h4>Follow Jorek on many known social media platforms:</h4>    
+                    <ul>
+                        <li><a class="facebook" href="https://www.facebook.com/Jorekofficial/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/jorek_ofc/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="twitter" href="https://twitter.com/jorek_ofc" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="youtube" href="https://www.youtube.com/channel/UC8RH8I0pfGyf5Rh7mCgj0Ow" target="_blank"> <i class="fab fa-youtube"></i></a></li>
+                        <li><a class="beatport" href="https://www.beatport.com/artist/jorek/530860" target="_blank"><i class="fas fa-headphones"></i></a></li>
+                        <li><a class="spotify" href="https://open.spotify.com/artist/64rNol4JogGwpauzKVo8AO" target="_blank"><i class="fab fa-spotify"></i></a></li>
+                        <li><a class="soundcloud" href="https://soundcloud.com/jorekofficial" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
+                    </ul>
+                </div>
+                <!-- End of Page -->
+                <div class="content" id="footer">
+                    <p>	&copy;2017 JOREK All Rights reserved</p>
+                    <p><strong><a href="impressum.html">Impressum</a></strong> 	&amp; <strong><a href="rechtliches.html">Legal Disclosures</a></strong>.</p>
+                </div>
+            </main>
+            <!-- Script -->
+            <!-- <script>
+                    // Look for .hamburger
+                var hamburger = document.querySelector(".hamburger");
+                    // On click
+                hamburger.addEventListener("click", function() {
+                    // Toggle class "is-active"
+                hamburger.classList.toggle("is-active");
+                    // Do something else, like open/close menu
+                });
+            </script> -->
+            <script>
+            function openmenu() {
+                var hamburger = document.querySelector(".hamburger");
+                var x = document.getElementById("expandedmenu");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                    hamburger.classList.toggle("is-active");
+                } else {
+                    x.style.display = "block";
+                    hamburger.classList.toggle("is-active");
+                }
+            }
+            </script>
+        </body>
+    </html>
+       
+               

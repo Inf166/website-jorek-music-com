@@ -1,0 +1,402 @@
+:root {
+    --crimson: #cd201f;
+    --font: #F4F4F4;
+    --grey: #222222;
+    --background: #171717;
+}
+body {
+   background-color: var(--background);
+   color: var(--font);
+   font-family: "Abel", sans-serif;
+}
+
+/* Media Query for ALL specific */
+@media (min-width: 144px) {
+    .teaserimage {
+        width: 100%;
+        height: auto;
+        padding-bottom: 15px;
+        opacity: 0.2;
+    }
+}
+
+/* Media Query for Desktop specific */
+@media (min-width: 801px) {
+    .hamburger {
+        display: none;
+    }
+    .navigation {
+        z-index: 10;
+        position: sticky;
+        background-color: var(--grey);
+        top: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        border-bottom: 1px solid var(--crimson);
+        padding: 0 20% 0 20%;
+    }
+    .logo {
+        z-index: 7;
+        height: 40px;
+        width: auto;
+    }
+    .menu {
+        z-index: 9;
+        display: block;
+        text-transform: capitalize;
+        background-color: var(--grey);
+        display: flex;
+        list-style: none;
+    }
+    .menu li {
+        padding-left: 15px;
+    }
+    .menu a{
+        text-decoration: none;
+        color: var(--font);
+        font-size: 24px;
+    }
+    .menu a:hover{
+        color: var(--crimson);
+    }
+    blur{
+        display: none;
+        z-index: 2;
+        background-color: #171717c4;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+    .main {
+        z-index: 3;
+        top: 60px;
+        height: 100%;
+        padding: 0 20% 0 20%;
+    }
+    .main h1 {
+        font-size: 28px;
+        padding-bottom: 15px;
+    }
+    .main h2 {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    .main p {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }  
+    .main a {
+        text-decoration: none;
+        color: var(--crimson);
+    }
+    .main strong {
+        font-weight: bold;
+    }
+    .player {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .albumpreview {
+        padding-bottom: 15px;
+    }
+    .albumpreview .container {
+        max-height: 80px;
+        width: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .albumpreview .container ul {
+        list-style: none;
+        display: flex;
+    }
+    .albumpreview .container ul li {
+        border-radius: 5px;
+    }
+    .albumpreview .container .albumcover {
+        height: 70px;
+        width: auto;
+        padding: 5px;
+    }
+    .contact {
+        padding-bottom: 15px;
+    }
+    .contact li {
+        padding: 5px;
+    }
+    .events {
+        padding-bottom: 15px;
+    }
+    .events iframe{
+        margin: 5px !important;
+    }
+    .socialmedia {
+        padding-bottom: 15px;
+    }
+    .socialmedia ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16px, 1fr));
+        grid-gap: 15px;
+    }
+    .socialmedia a {
+        color: var(--font);
+        margin: auto;
+    }
+    .socialmedia ul li{
+        text-align: center;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        /* background-color: var(--grey);
+        border-radius: 50%; */
+    }
+    i {
+        font-family: FontAwesome;
+        font-size: 16px;
+    }
+
+    .youtube:hover{color:#cd201f;}
+    .facebook:hover{color:#3b5999;}
+    .instagram:hover{color:#e4405f;}
+    .twitter:hover{color:#55acee;}
+    .beatport:hover{color:#A8E00F;}
+    .spotify:hover{color:#1db954;}
+    .soundcloud:hover{color:#ff7700;}
+    footer {
+        z-index: 1;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    footer p {
+        padding: 2.5px 10px;
+    }
+    footer p a  {
+        text-decoration: none;
+        color: var(--crimson);
+    }
+}
+
+/* Media Query for Tablet specific */
+@media (max-width: 800px) {
+    .navigation {
+        z-index: 10;
+        position: sticky;
+        background-color: var(--grey);
+        top: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--crimson);
+    }
+    .hamburger {
+        z-index: 8;
+        display: block;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 44px;
+        height: 5px;
+        display: block;
+        background-color: var(--font);
+        margin: 8px auto;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition:all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+    }
+    .hamburger.is-active .line:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.is-active .line:nth-child(1){
+        transform: translateY(13px) rotate(45deg);
+        -moz-transition: translateY(13px) rotate(45deg);
+        -webkit-transition:translateY(13px) rotate(45deg);
+        -o-transition: translateY(13px) rotate(45deg);
+    }
+    .hamburger.is-active .line:nth-child(3){
+        transform: translateY(-13px) rotate(-45deg);
+        -moz-transition: translateY(-13px) rotate(-45deg);
+        -webkit-transition:translateY(-13px) rotate(-45deg);
+        -o-transition: translateY(-13px) rotate(-45deg);
+    }
+    .logo {
+        z-index: 7;
+        height: 40px;
+        width: auto;
+        position: absolute;
+        left: -9999px;
+        right: -9999px;
+        margin: auto;
+    }
+    .menu {
+        z-index: 9;
+        display: none;
+        text-transform: capitalize;
+        top: 61px;
+        position: absolute;
+        background-color: var(--grey);
+        width: 100%;
+        height: 0;
+        /* transition: all 0.3 ease-in-out; */
+        /* clip-path: circle(0px at top left);
+        transition: clip-path ease-in-out 700ms;
+        -moz-transition: clip-path ease-in-out 700ms;
+        -webkit-transition:clip-path ease-in-out 700ms;
+        -o-transition: clip-path ease-in-out 700ms; */
+    }
+    .menu.is-open {
+        /* clip-path: circle(250% at top left); */
+        height: auto;
+    }
+    .menu li {
+        padding: 15px;
+    }
+    .menu a{
+        text-decoration: none;
+        color: var(--font);
+        font-size: 24px;
+    }
+    .menu a:hover{
+        color: var(--crimson);
+    }
+    blur{
+        display: none;
+        z-index: 2;
+        background-color: #171717c4;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+    .main {
+        z-index: 3;
+        top: 60px;
+        height: 100%;
+        padding: 0 10% 0 10%;
+    }
+    .main h1 {
+        font-size: 28px;
+        padding-bottom: 15px;
+    }
+    .main h2 {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    .main p {
+        font-size: 16px;
+        padding-bottom: 5px;
+        line-height: 130%;
+    }  
+    .main a {
+        text-decoration: none;
+        color: var(--crimson);
+    }
+    .player {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .albumpreview {
+        padding-bottom: 15px;
+    }
+    .albumpreview .container {
+        max-height: 80px;
+        width: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .albumpreview .container ul {
+        list-style: none;
+        display: flex;
+    }
+    .albumpreview .container ul li {
+        border-radius: 5px;
+    }
+    .albumpreview .container .albumcover {
+        height: 70px;
+        width: auto;
+        padding: 5px;
+    }
+    .contact {
+        padding-bottom: 15px;
+    }
+    .contact li {
+        padding: 5px;
+    }
+    .events {
+        padding-bottom: 15px;
+    }
+    .events iframe{
+        margin: auto;
+    }
+    .socialmedia {
+        padding-bottom: 15px;
+    }
+    .socialmedia ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16px, 1fr));
+        grid-gap: 15px;
+    }
+    .socialmedia a {
+        color: var(--font);
+        margin: auto;
+    }
+    .socialmedia ul li{
+        text-align: center;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        /* background-color: var(--grey);
+        border-radius: 50%; */
+    }
+    i {
+        font-family: FontAwesome;
+        font-size: 16px;
+    }
+
+    .youtube:hover{color:#cd201f;}
+    .facebook:hover{color:#3b5999;}
+    .instagram:hover{color:#e4405f;}
+    .twitter:hover{color:#55acee;}
+    .beatport:hover{color:#A8E00F;}
+    .spotify:hover{color:#1db954;}
+    .soundcloud:hover{color:#ff7700;}
+    footer {
+        z-index: 1;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    footer p {
+        padding: 2.5px 10px;
+    }
+    footer p a  {
+        text-decoration: none;
+        color: var(--crimson);
+    }
+    
+}
+
+/* Media Query for Mobile specific */
+@media (max-width: 600px) {
+    .main {
+        z-index: 3;
+        top: 60px;
+        height: 100%;
+        padding: 0 10px 0 10px;
+    }
+}
